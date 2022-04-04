@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "3b29385d-9ad4-452f-b934-78bd915971fb",
+		"name": "Thales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/reservations?name=name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/reservations?name=name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/reservations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test\",\r\n    \"seats\": 1,\r\n    \"email\": \"test@gmail.com\",\r\n    \"optional\": \"12312\",\r\n    \"reservationTime\": \"2022-01-01 15: 00: 12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/reservations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Test",
+							"disabled": true
+						},
+						{
+							"key": "seats",
+							"value": "8",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "optional",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "reservationTime",
+							"value": "2022-01-01 15:00:12",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

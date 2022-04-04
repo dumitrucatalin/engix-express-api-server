@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mysql:
+    image: mariadb:10.5.8
+    ports:
+      - 3308:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=S3cret
+      - MYSQL_PASSWORD=An0thrS3crt
+      - MYSQL_USER=citizix_user
+      - MYSQL_DATABASE=reservations_db
