@@ -26,8 +26,8 @@ const createReservation = async (req, res, next) => {
   try {
     const reservation = req.body;
     const reservations = await Reservation.create(reservation);
-
-    return res.status(201).json('Data saved with success!');
+    
+    return res.status(201).json(reservations);
   } catch (error) {
     return res.status(error.statusCode || 422).send({ message: error.message });
   }
